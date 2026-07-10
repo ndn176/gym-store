@@ -1,0 +1,275 @@
+import { Product, Order } from './types';
+
+export const PRODUCTS: Product[] = [
+  {
+    id: 'core-aesthetic-v3-tee',
+    name: 'Core Aesthetic V3 Performance Tee',
+    price: 64.00,
+    category: 'Tops',
+    collection: 'Unisex',
+    status: 'New In',
+    image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&q=80&w=800',
+    hoverImage: 'https://images.unsplash.com/photo-1581655353564-df123a1eb820?auto=format&fit=crop&q=80&w=800',
+    images: [
+      'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1581655353564-df123a1eb820?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&q=80&w=800',
+    ],
+    description: 'Engineered for high-intensity training and aesthetic styling. The Core Aesthetic V3 Performance Tee features our signature athletic cut, curved hem, and ultra-lightweight breathable fabric that moves naturally with your body. With enhanced moisture-wicking and durable flatlock seams, this is the ultimate lifter\'s tee.',
+    materials: [
+      '88% Recycled Polyester',
+      '12% Elastane Blend',
+      '4-way high elastic athletic weave'
+    ],
+    care: [
+      'Machine wash cold inside out',
+      'Do not bleach / Do not tumble dry',
+      'Iron low heat if needed'
+    ],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    rating: 4.9,
+    reviewsCount: 148
+  },
+  {
+    id: 'apex-perf-tee',
+    name: 'Apex Performance Tee',
+    price: 64.00,
+    category: 'Tops',
+    collection: 'Unisex',
+    status: 'New In',
+    image: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&q=80&w=800',
+    hoverImage: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&q=80&w=800',
+    images: [
+      'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&q=80&w=800'
+    ],
+    description: 'The Apex Tee represents the pinnacle of performance textiles. Created for maximal range of motion during heavy compound lifts, it keeps you cool under pressure.',
+    materials: ['90% Premium Nylon', '10% Spandex Matrix'],
+    care: ['Machine wash cold', 'Hang dry only'],
+    sizes: ['S', 'M', 'L', 'XL'],
+    rating: 4.8,
+    reviewsCount: 94
+  },
+  {
+    id: 'kinetic-jogger',
+    name: 'Kinetic Jogger',
+    price: 98.00,
+    category: 'Bottoms',
+    collection: 'Men',
+    status: 'Essentials',
+    image: 'https://images.unsplash.com/photo-1552642986-ccb41e7059e7?auto=format&fit=crop&q=80&w=800',
+    hoverImage: 'https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&q=80&w=800',
+    images: [
+      'https://images.unsplash.com/photo-1552642986-ccb41e7059e7?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&q=80&w=800'
+    ],
+    description: 'Durable, sleek, and tapered joggers optimized for both heavy training sessions and urban exploration. Deep zip pockets ensure items stay secure.',
+    materials: ['85% Cotton', '15% Tech Fleece Polyester'],
+    care: ['Cold wash', 'Low heat tumble dry'],
+    sizes: ['M', 'L', 'XL', 'XXL'],
+    rating: 4.7,
+    reviewsCount: 215
+  },
+  {
+    id: 'vantage-shell-jacket',
+    name: 'Vantage Shell Jacket',
+    price: 115.00,
+    originalPrice: 155.00,
+    category: 'Outerwear',
+    collection: 'Unisex',
+    status: 'Sale',
+    image: 'https://images.unsplash.com/photo-1548883354-7622d03aca27?auto=format&fit=crop&q=80&w=800',
+    hoverImage: 'https://images.unsplash.com/photo-1544923246-77307dd654cb?auto=format&fit=crop&q=80&w=800',
+    images: [
+      'https://images.unsplash.com/photo-1548883354-7622d03aca27?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1544923246-77307dd654cb?auto=format&fit=crop&q=80&w=800'
+    ],
+    description: 'Designed to shield you from elements without trapping heat. Water-repellent, windproof, yet highly breathable. Matte technical finish.',
+    materials: ['100% Recycled Ripstop Nylon', 'DWR Weatherproof coating'],
+    care: ['Gentle cycle cold', 'Tumble dry low'],
+    sizes: ['S', 'M', 'L', 'XL'],
+    rating: 4.6,
+    reviewsCount: 68
+  },
+  {
+    id: 'pro-lifting-belt',
+    name: 'Pro Series Lifting Belt',
+    price: 145.00,
+    category: 'Accessories',
+    collection: 'Men',
+    status: 'Essentials',
+    image: 'https://images.unsplash.com/photo-1605296867304-46d5465a25f1?auto=format&fit=crop&q=80&w=800',
+    hoverImage: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&q=80&w=800',
+    images: [
+      'https://images.unsplash.com/photo-1605296867304-46d5465a25f1?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&q=80&w=800'
+    ],
+    description: 'Handcrafted premium 10mm thick suede-lined powerlifting belt. Quick-release custom steel lever buckle provides instant core stabilization and ease of use.',
+    materials: ['100% Genuine Full-Grain Suede Leather', 'Tempered Steel Buckle'],
+    care: ['Wipe clean with dry cloth only', 'Store in dry place'],
+    sizes: ['S', 'M', 'L', 'XL'],
+    rating: 5.0,
+    reviewsCount: 340
+  },
+  {
+    id: 'core-training-short',
+    name: 'Core Training Short',
+    price: 58.00,
+    category: 'Bottoms',
+    collection: 'Men',
+    status: 'New In',
+    image: 'https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&q=80&w=800',
+    hoverImage: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&q=80&w=800',
+    images: [
+      'https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&q=80&w=800'
+    ],
+    description: 'Lightweight side-split shorts tailored for maximum movement during squats, running, or functional training. Breathable compression liner includes phone sleeve.',
+    materials: ['92% Polyester', '8% Spandex', 'Inner compression mesh'],
+    care: ['Machine wash cold', 'Do not iron details'],
+    sizes: ['S', 'M', 'L', 'XL'],
+    rating: 4.8,
+    reviewsCount: 112
+  },
+  {
+    id: 'aesthetic-utility-kit',
+    name: 'Aesthetic Utility Kit',
+    price: 45.00,
+    category: 'Accessories',
+    collection: 'Unisex',
+    status: 'Essentials',
+    image: 'https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&q=80&w=800',
+    hoverImage: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=800',
+    images: [
+      'https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=800'
+    ],
+    description: 'Matte water-resistant personal utility pouch. Perfect to keep chalk, liquid grips, wireless earbuds, cardholder, and smelling salts tidy in your gym duffle.',
+    materials: ['1000D Cordura Nylon Waterproof outer shell', 'Heavy YKK Zippers'],
+    care: ['Hand clean with moist warm cloth'],
+    sizes: ['One Size'],
+    rating: 4.9,
+    reviewsCount: 75
+  },
+  {
+    id: 'heavy-oversized-hoodie',
+    name: 'Heavyweight Oversized Hoodie',
+    price: 120.00,
+    category: 'Tops',
+    collection: 'Men',
+    status: 'New In',
+    image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&q=80&w=800',
+    hoverImage: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=800',
+    images: [
+      'https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=800'
+    ],
+    description: 'A masterpiece of structural cotton drape. Weighing 500GSM, this oversized fit hoodie offers the classic aesthetic pump cover profile with heavy ribs.',
+    materials: ['100% Organic Heavy French Cotton', '500GSM Density'],
+    care: ['Wash cold separate', 'Dry flat to prevent stretching'],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    rating: 4.9,
+    reviewsCount: 184
+  },
+  {
+    id: 'elite-socks-pack',
+    name: 'Elite Sock Pack (3-Pack)',
+    price: 35.00,
+    category: 'Accessories',
+    collection: 'Unisex',
+    status: 'Essentials',
+    image: 'https://images.unsplash.com/photo-1582966772680-860e372bb558?auto=format&fit=crop&q=80&w=800',
+    hoverImage: 'https://images.unsplash.com/photo-1616422285623-13ff0162193c?auto=format&fit=crop&q=80&w=800',
+    images: [
+      'https://images.unsplash.com/photo-1582966772680-860e372bb558?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1616422285623-13ff0162193c?auto=format&fit=crop&q=80&w=800'
+    ],
+    description: 'Supportive cushioned crew socks featuring engineered arch compression and ventilation mesh panels to prevent fatigue during heavy lifts.',
+    materials: ['78% Combed Cotton', '18% Polyester', '4% Spandex Lycra'],
+    care: ['Machine wash warm', 'Tumble dry medium'],
+    sizes: ['S/M', 'L/XL'],
+    rating: 4.7,
+    reviewsCount: 310
+  }
+];
+
+export const POPULAR_SEARCHES = [
+  'V3 Performance Tee',
+  'Stealth Compression Short',
+  'Aesthetic Pump Cover',
+  'Quick release Lever Belt',
+  'Waterproof Shell Jacket'
+];
+
+export const MOCK_ORDERS: Order[] = [
+  {
+    id: 'IA-49271',
+    date: '2026-06-18',
+    status: 'Delivered',
+    items: [
+      {
+        productId: 'heavy-oversized-hoodie',
+        productName: 'Heavyweight Oversized Hoodie',
+        image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&q=80&w=800',
+        size: 'XL',
+        quantity: 1,
+        price: 120.00
+      },
+      {
+        productId: 'elite-socks-pack',
+        productName: 'Elite Sock Pack (3-Pack)',
+        image: 'https://images.unsplash.com/photo-1582966772680-860e372bb558?auto=format&fit=crop&q=80&w=800',
+        size: 'L/XL',
+        quantity: 1,
+        price: 35.00
+      }
+    ],
+    subtotal: 155.00,
+    shipping: 10.00,
+    total: 165.00,
+    shippingAddress: {
+      fullName: 'John Doe',
+      email: 'john.doe@ironandaesthetic.com',
+      phone: '+1 (555) 019-2834',
+      address: '742 Evergreen Terrace',
+      city: 'Springfield',
+      postalCode: '97477'
+    },
+    paymentMethod: 'COD'
+  },
+  {
+    id: 'IA-48192',
+    date: '2026-05-02',
+    status: 'Delivered',
+    items: [
+      {
+        productId: 'kinetic-jogger',
+        productName: 'Kinetic Jogger',
+        image: 'https://images.unsplash.com/photo-1552642986-ccb41e7059e7?auto=format&fit=crop&q=80&w=800',
+        size: 'L',
+        quantity: 1,
+        price: 98.00
+      }
+    ],
+    subtotal: 98.00,
+    shipping: 10.00,
+    total: 108.00,
+    shippingAddress: {
+      fullName: 'John Doe',
+      email: 'john.doe@ironandaesthetic.com',
+      phone: '+1 (555) 019-2834',
+      address: '742 Evergreen Terrace',
+      city: 'Springfield',
+      postalCode: '97477'
+    },
+    paymentMethod: 'QR Banking'
+  }
+];
+
+export const MOCK_USER = {
+  name: 'John Doe',
+  email: 'john.doe@ironandaesthetic.com',
+  phone: '+1 (555) 019-2834',
+  birthday: '1995-10-24',
+  gender: 'Male'
+};

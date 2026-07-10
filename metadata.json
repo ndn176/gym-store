@@ -1,0 +1,6 @@
+{
+  "name": "IRON & AESTHETIC",
+  "description": "A premium activewear brand and shopping experience with interactive navigation, rich product grid, advanced filters, product detail, dynamic shopping cart, interactive checkout, order success tracking, and user account/order management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
